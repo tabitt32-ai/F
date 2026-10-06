@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 38% 97%;
+    --foreground: 24 12% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 12% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 12% 16%;
+    --primary: 30 42% 56%;
+    --primary-foreground: 30 38% 97%;
+    --secondary: 30 28% 93%;
+    --secondary-foreground: 24 12% 16%;
+    --muted: 30 28% 93%;
+    --muted-foreground: 25 9% 50%;
+    --accent: 30 28% 93%;
+    --accent-foreground: 24 12% 16%;
+    --destructive: 0 50% 54%;
+    --destructive-foreground: 30 38% 97%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 30 42% 56%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 24 12% 16%;
+    --sidebar-primary: 30 42% 56%;
+    --sidebar-primary-foreground: 30 38% 97%;
+    --sidebar-accent: 30 28% 93%;
+    --sidebar-accent-foreground: 24 12% 16%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 30 42% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface-light text-text-dark font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #c3935c 0%, #d4af7a 50%, #c3935c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, #c3935c 0%, #d4af7a 50%, #c3935c 100%);
+  }
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, rgba(26,22,18,0.8) 0%, rgba(26,22,18,0) 100%);
+  }
+  .bg-gradient-warm {
+    background: linear-gradient(180deg, #fdf8f3 0%, #f5ede4 100%);
+  }
+  .line-gold {
+    height: 2px;
+    width: 80px;
+    background: linear-gradient(135deg, #c3935c, #d4af7a);
+  }
+  .scrollbar-gold::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scrollbar-gold::-webkit-scrollbar-track {
+    background: #e8e0d8;
+    border-radius: 4px;
+  }
+  .scrollbar-gold::-webkit-scrollbar-thumb {
+    background: #c3935c;
+    border-radius: 4px;
+  }
+}
